@@ -1,0 +1,8 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.1",
+    "angular-credit-cards": "~2.3.5"
+  }
+}

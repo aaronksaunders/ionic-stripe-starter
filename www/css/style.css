@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+
+.exp-input {
+  height: 30px;
+  width: 50px;
+  border: 1px solid grey;
+  text-align: center
+}
+.text-input {
+  height: 30px;
+  border: 1px solid grey;
+  padding-left: 10px
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="lib/angular-credit-cards/release/angular-credit-cards.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+
+  <ion-pane>
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Ionic Stripe Starter</h1>
+    </ion-header-bar>
+    <ion-content class="ion-list">
+      <form name="paymentForm" class="padding" ng-submit="makeStripePayment(card)">
+
+        <label class="item item-input item-stacked-label padding">
+          Card Type:
+          <select ng-model="card.cardType" ng-options="type for type in ['Visa', 'American Express', 'MasterCard']"></select>
+        </label>
+        <label class="item item-input item-stacked-label padding">
+          Card Number
+          <input type="text" ng-model="card.number" name="cardNumber" cc-number cc-type="card.cardType" style="height:30px;border:1px solid grey; padding-left:10px" />
+        </label>
+        <label class="item item-input item-stacked-label padding">
+          Card CVC
+          <input type="text" ng-model="card.cvc" cc-type="cardNumber.$ccType"
+           style="height:30px;border:1px solid grey; padding-left:10px"/>
+        </label>
+        <label class="item item-input item-stacked-label padding">
+          Expiration Date:
+          <div cc-exp>
+            <input ng-model="card.exp_month" cc-exp-month style="height:30px;width:50px;border:1px solid grey; text-align:center" />
+            <input ng-model="card.exp_year" cc-exp-year style="height:30px;width:50px;border:1px solid grey; text-align:center" />
+          </div>
+        </label>
+        <div class="padding">
+          <button type="submit" ng-disabled="paymentForm.$invalid" class="button button-block button-positive">MAKE PAYMENT</button>
+        </div>
+        <!--
+        <p ng-show="paymentForm.cardNumber.$error.ccNumberType">That's not a valid {{card.cardType}}</p>
+        <p ng-show="paymentForm.$invalid">That's not a valid Card Information</p>
+      -->
+        <pre style="font-size:smaller">{{paymentForm | json}}</pre>
+        <pre style="font-size:smaller">{{card | json}}</pre>
+        <pre style="font-size:smaller">{{cardNumber | json}}</pre>
+      </form>
+    </ion-content>
+  </ion-pane>
+</body>
+
+</html>

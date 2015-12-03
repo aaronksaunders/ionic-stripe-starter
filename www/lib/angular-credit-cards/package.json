@@ -1,0 +1,61 @@
+{
+  "name": "angular-credit-cards",
+  "version": "2.3.5",
+  "description": "Angular directives for formatting and validating credit card inputs",
+  "main": "./src",
+  "scripts": {
+    "test": "standard && zuul --phantom -- test/*.js",
+    "umd": "browserify -e . -s angularCreditCards -t [exposify --expose [ --angular=angular ] ] -p derequire/plugin > ./release/angular-credit-cards.js",
+    "preversion": "npm run umd && git add -A ../release/* && git commit -m 'UMD Build'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bendrucker/angular-credit-cards.git"
+  },
+  "keywords": [
+    "angular",
+    "credit",
+    "card",
+    "payments",
+    "validation",
+    "directive",
+    "form"
+  ],
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendrucker/angular-credit-cards/issues"
+  },
+  "homepage": "https://github.com/bendrucker/angular-credit-cards",
+  "devDependencies": {
+    "angular": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "brfs": "~1.4.0",
+    "browserify": "~10.2.4",
+    "chai": "~3.0.0",
+    "derequire": "~2.0.0",
+    "exposify": "~0.4.1",
+    "phantomjs": "~1.9.17",
+    "sinon": "~1.15.3",
+    "sinon-chai": "~2.8.0",
+    "standard": "~4.2.1",
+    "zuul": "~3.0.0"
+  },
+  "dependencies": {
+    "ap": "~0.2.0",
+    "creditcards": "~1.5.0",
+    "function-bind": "~1.0.2"
+  },
+  "peerDependencies": {
+    "angular": ">=1.3 <1.5"
+  },
+  "files": [
+    "src/*.js",
+    "readme.md"
+  ],
+  "standard": {
+    "ignore": [
+      "release/"
+    ]
+  }
+}

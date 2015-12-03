@@ -1,26 +1,21 @@
-Ionic App Base
-=====================
+ionic-stripe-starter
+=====
+This can ONLY be run on device and requires the following plugin and library 
+* [Telerik-Verified-Plugins/Stripe](https://github.com/Telerik-Verified-Plugins/Stripe)
+* [angular-credit-cards](https://www.npmjs.org/package/creditcards)
 
-A starting project for Ionic that optionally supports using custom SCSS.
-
-## Using this project
-
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
-
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
-
+## Installation: Telerik-Verified-Plugins/Stripe
 ```bash
-$ npm install -g ionic
+# using ionic, use your own api key from stripe console
+$ ionic plugin add https://github.com/Telerik-Verified-Plugins/Stripe --variable API_KEY=sk_test_xxxxxxxxxxxxxxx
 ```
 
-Then run:
-
+## Installation: angular-credit-cards
 ```bash
-$ ionic start myProject tabs
+# using bower
+$ bower install angular-credit-cards
 ```
-
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
-
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
-# ionic-stripe-starter
+When completed, be sure to save the state
+```bash
+$ ionic save state
+```

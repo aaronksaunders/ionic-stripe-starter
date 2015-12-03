@@ -19,4 +19,17 @@ When completed, be sure to save the state
 ```bash
 $ ionic save state
 ```
+
+If using your own project, be sure to make the following modifications to the appropriate files
+
+Update the `index.html` file
+```html
+<!-- your app's js -->
+<script src="lib/angular-credit-cards/release/angular-credit-cards.js"></script>
+<script src="js/app.js"></script>
+```  
+Update the `app.js` file
+```Javascript
+angular.module('starter', ['ionic', 'credit-cards'])
+```
 ![Image](https://github.com/aaronksaunders/ionic-stripe-starter/blob/master/screenshots/Screenshot%202015-12-03%2000.01.30.png)

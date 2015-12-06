@@ -37,6 +37,12 @@
           Card Type:
           <select ng-model="card.cardType" ng-options="type for type in ['Visa', 'American Express', 'MasterCard']"></select>
         </label>
+          
+        <label class="item item-input item-stacked-label padding">
+          Charge Amount
+          <input type="text" ng-model="card.amount" name="cardAmount" style="height:30px;border:1px solid grey; padding-left:10px" />
+        </label>
+          
         <label class="item item-input item-stacked-label padding">
           Card Number
           <input type="text" ng-model="card.number" name="cardNumber" cc-number cc-type="card.cardType" style="height:30px;border:1px solid grey; padding-left:10px" />
@@ -59,10 +65,11 @@
         <!--
         <p ng-show="paymentForm.cardNumber.$error.ccNumberType">That's not a valid {{card.cardType}}</p>
         <p ng-show="paymentForm.$invalid">That's not a valid Card Information</p>
-      -->
-        <pre style="font-size:smaller">{{paymentForm | json}}</pre>
+      --><!--
+        <pre style="font-size:smaller">{{paymentForm}}</pre>
         <pre style="font-size:smaller">{{card | json}}</pre>
         <pre style="font-size:smaller">{{cardNumber | json}}</pre>
+-->
       </form>
     </ion-content>
   </ion-pane>

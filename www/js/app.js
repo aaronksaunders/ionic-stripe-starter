@@ -25,7 +25,8 @@ angular.module('starter', ['ionic', 'credit-cards'])
         return;
       }
       stripe.charges.create({
-          amount: 400,
+          // amount is in cents so * 100
+          amount: _cardInformation.amount * 100,
           currency: 'usd',
           card: {
             "number": _cardInformation.number,

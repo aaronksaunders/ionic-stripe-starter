@@ -1,5 +1,7 @@
 ionic-stripe-starter
 =====
+
+[![Join the chat at https://gitter.im/aaronksaunders/ionic-stripe-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/aaronksaunders/ionic-stripe-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 This can ONLY be run on device and requires the following plugin and library 
 * [Telerik-Verified-Plugins/Stripe: ](https://github.com/Telerik-Verified-Plugins/Stripe)Stripe is a payment infrastructure for the internet. Stripe Cordova SDK is built around the well organized REST API. it exposes a global window.stripe object that defines various operation to initialze and transfer payments
 * [angular-credit-cards: ](https://www.npmjs.org/package/creditcards)A set of Angular directives for constructing credit card payment forms
